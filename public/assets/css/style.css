@@ -1,0 +1,261 @@
+:root{
+    --pink: #f14e95;
+    --bg: #000;
+    --shadow: 0 2px 2px rgba(2 3 5/0.5);
+
+
+}
+body{
+    font-size: 1.2rem;
+    font-family: "Work Sans", sans-serif;
+    min-height: 2000px;
+}
+
+.hero h1, .hero h4, .hero p{
+text-shadow: var(--shadow);
+}
+
+.hero h1{
+    font-family: 'sacramento' , cursive;
+    font-size: 6rem;
+
+}
+
+.hero h4{
+    font-size:1.6rem;
+}
+
+.hero p{
+    font-size: 1.4rem;
+
+}
+.hero a{
+    color: var(--pink);
+    background-color:aliceblue;
+
+}
+.hero a:hover{
+    background-color: var(--pink);
+    color: aliceblue;
+}
+.mynavbar{
+background-color: (#000) !important;
+backdrop-filter: blur;
+}
+.navbar nav{
+    display: flex; /* Mengatur agar link navigasi berada dalam baris yang sama */
+    gap: 20px; /* Jarak antar link */
+    padding: 10px; /* Jarak dalam container */
+    position: fixed; /* Agar navbar tetap di atas */
+    top: 0; /* Posisi di bagian atas */
+    right: 0; /* Posisi di bagian kanan */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih dengan transparansi */
+    backdrop-filter: blur(10px); /* Efek blur di latar belakang */
+    border-radius: 5px; /* Sudut membulat (opsional) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan (opsional) */
+    z-index: 10;
+}
+
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title{
+    font-family: 'sacramento', cursive;
+    font-size: 3.2rem;
+
+
+}
+.mynavbar .nav-link{
+ text-transform: uppercase;
+}
+
+.home{
+    background-image: url('/assets/img/hand-drawn-minimal-gold-floral-seamless-pattern_44538-9413.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -6rem;
+    padding-top:15rem;
+    padding-bottom:5rem;
+    font-family: "Work Sans", sans-serif;
+}
+
+.info{
+    position: relative;
+    min-height: 100vh;
+    background-color: #000;
+    z-index: -1;
+
+
+}
+.info h1, .info h4, .info h2,.info h3, .info p{
+    text-shadow: var(--shadow);
+    color: aliceblue;
+    }
+    
+    .info h1{
+        font-family: 'sacramento' , cursive;
+        font-size: 6rem;
+    
+    }
+    
+    .info h4{
+        font-size:1.6rem;
+    }
+    
+    .info p{
+        font-size: 1.4rem;
+    
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .mimic{
+        margin: 1rem 1rem;
+    }
+   .mimic{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+
+   }
+   .mimic h5 {
+    font-family: 'sacramento' , cursive;
+font-size: 1.5rem;
+padding-left: 20px; 
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+        right: 10;
+}
+.mimic h6 {
+    font-family: "Work Sans", sans-serif;
+font-size: 1.1rem;
+padding-left: 20px; 
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+        left:10;
+}
+.mimic h3, .mimic h4{
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+
+}
+.overlay 
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+.content 
+{
+    max-height: 30%;
+    width: 50%;
+}
+
+.overlay 
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+
+    
