@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/index', function () {
+Route::get('/home', function () {
     return view('index');  //merujuk ke file welcome.blade.php di folder resource/views
 });
 

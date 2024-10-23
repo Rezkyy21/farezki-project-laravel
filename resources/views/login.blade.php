@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
   <title>Login Page</title>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 h-screen flex items-center justify-center" style="background-image: url('your-floral-background-url'); background-size: cover; background-position: center;">
 
   <!-- Login Form -->
   <div class="bg-white/90 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-xs w-full">
-    <form class="space-y-4">
+    <form class="space-y-4" id="loginForm">
       <!-- Username Field -->
       <div>
         <label for="username" class="block text-gray-700">Username</label>
@@ -30,6 +29,7 @@
       </div>
     </form>
   </div>
+  <script src="assets/js/script.js"></script>
 
 </body>
 </html>
