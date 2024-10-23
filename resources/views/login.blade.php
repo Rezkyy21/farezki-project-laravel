@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/login.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @vite('resources/css/app.css')
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-    <form id="loginForm">
-        <div>
-            <label form ="username">username</label>
-            <input type="text" name="username" id="username">
-        </div>
-        <div>
-            <label form ="password">password</label>
-            <input type="password" name="password" id="password">
-        </div>
-        <button type="submit">Login</button>
-    </form>
+<body class="bg-gray-100 h-screen flex items-center justify-center" style="background-image: url('your-floral-background-url'); background-size: cover; background-position: center;">
 
-    <script src="assets/js/script.js"></script>
+  <!-- Login Form -->
+  <div class="bg-white/90 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-xs w-full">
+    <form class="space-y-4">
+      <!-- Username Field -->
+      <div>
+        <label for="username" class="block text-gray-700">Username</label>
+        <input type="text" id="username" class="w-full p-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400" placeholder="Enter your username">
+      </div>
+
+      <!-- Password Field -->
+      <div>
+        <label for="password" class="block text-gray-700">Password</label>
+        <input type="password" id="password" class="w-full p-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400" placeholder="Enter your password">
+      </div>
+
+      <!-- Login Button -->
+      <div>
+        <button type="submit" class="w-full p-2 bg-pink-400 text-white font-bold rounded-md hover:bg-pink-500 transition">Login</button>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>
