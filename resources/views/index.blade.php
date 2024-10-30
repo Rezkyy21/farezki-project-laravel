@@ -11,6 +11,7 @@
 
   <!-- Bagian Atas (Header) -->
   <header class="bg-white text-center py-12 shadow-md">
+  <a href="{{ route('login') }}" class="text-1xl text-white justify-center bg-slate-500 bg-cover">Login Sini
     <p class="text-gray-500">Kepada Yang melihat website ini</p>
     <h1 class="text-6xl font-extrabold text-gray-700">Fadhlan & Nafi</h1>
     <p class="text-gray-400 mt-2">akan melakukan pernikahan</p>
@@ -52,6 +53,7 @@
   <footer class="bg-black text-center py-4">
     <p class="text-white text-xl">BELUM SELESAI</p>
     <p class="text-white mt-2">vvvvvv</p>
+    <a href="{{ route('about') }}" class="text-1xl text-white">Tentang Saya
   </footer>
 
 </body>

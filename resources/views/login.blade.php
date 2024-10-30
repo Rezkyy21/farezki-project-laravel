@@ -27,6 +27,9 @@
       <div>
         <button type="submit" class="w-full p-2 bg-pink-400 text-white font-bold rounded-md hover:bg-pink-500 transition">Login</button>
       </div>
+     
+        <button type="" href="{{ route('login') }}" class="w-full p-2 bg-pink-400 text-white font-bold rounded-md hover:bg-pink-500 transition">Back</button>
+      </div>
     </form>
   </div>
   <script src="assets/js/script.js"></script>

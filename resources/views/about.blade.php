@@ -30,7 +30,10 @@ About Meh
 
 </div>
 
+
+
 </header>
+<a href="{{ route('home') }}" class="text-1xl text-white justify-center bg-slate-500 bg-cover">Kembali 
 
 <body>
 <div class="grid grid-cols-2 gap-4 place-content-center h-48 pl-25">
