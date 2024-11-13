@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MahasiswaResource\Pages;
-use App\Filament\Resources\MahasiswaResource\RelationManagers;
-use App\Models\Mahasiswa;
+use App\Filament\Resources\KehadiranResource\Pages;
+use App\Filament\Resources\KehadiranResource\RelationManagers;
+use App\Models\Kehadiran;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class MahasiswaResource extends Resource
+class KehadiranResource extends Resource
 {
-    protected static ?string $model = Mahasiswa::class;
+    protected static ?string $model = Kehadiran::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,10 +23,16 @@ class MahasiswaResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('nim'),
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\Select::make('jurusan_id')
-                ->relationship('Jurusan', 'name')
+                
+                Forms\Components\select::make('gender'),
+                Forms\Components\Select::make('kehadiran_id')
+                ->options([
+                    'hadir' => 'hadir',
+                    'tidak' => 'tidak',
+                    
+                ]),
+                Forms\Components\Select::make('name')
+                ->relationship('tamu', 'name')
                 ->required(),
             ]);
     }
@@ -35,9 +41,7 @@ class MahasiswaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nim')->sortable(),
-                Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('jurusan.name')->sortable()->searchable(),
+                //
             ])
             ->filters([
                 //
@@ -62,9 +66,9 @@ class MahasiswaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMahasiswas::route('/'),
-            'create' => Pages\CreateMahasiswa::route('/create'),
-            'edit' => Pages\EditMahasiswa::route('/{record}/edit'),
+            'index' => Pages\ListKehadirans::route('/'),
+            'create' => Pages\CreateKehadiran::route('/create'),
+            'edit' => Pages\EditKehadiran::route('/{record}/edit'),
         ];
     }
 }
